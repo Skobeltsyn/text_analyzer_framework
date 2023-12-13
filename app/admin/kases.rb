@@ -4,7 +4,7 @@ ActiveAdmin.register Kase do
 
   permit_params :title, :commentary, :for_learning, :for_testing, :dataset_id, conversation_replicas_attributes: [
     :id, :_delete, :_destroy, :content, :tag_cloud, :talker_id, :timing_in_seconds,
-    paramater_desired_values_attributes: [
+    parameter_desired_values_attributes: [
       :id, :_delete, :_destroy, :value, :normalized_value, :commentary, :conversation_replica_id, :parameter_name
     ]
   ]
@@ -27,7 +27,7 @@ ActiveAdmin.register Kase do
       _replica.input :tag_cloud, input_html: {rows: 2}
       _replica.input :talker_id
 
-      _replica.has_many :paramater_desired_values, allow_destroy: true, new_record: true do |desired_value|
+      _replica.has_many :parameter_desired_values, allow_destroy: true, new_record: true do |desired_value|
         desired_value.input :parameter_name
         desired_value.input :value, input_html: {rows: 2}
         desired_value.input :normalized_value

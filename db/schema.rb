@@ -64,7 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_26_204734) do
     t.integer "dataset_id"
   end
 
-  create_table "paramater_desired_values", force: :cascade do |t|
+  create_table "parameter_desired_values", force: :cascade do |t|
     t.text "value"
     t.float "normalized_value"
     t.text "commentary"
